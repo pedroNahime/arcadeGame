@@ -81,14 +81,13 @@ var Engine = (function (global) {
             updateEntities(dt);
 
             checkCollisions();
-
         }
 
         function checkCollisions() {
             allEnemies.forEach(function(enemy) {
-                if(self.x >= enemy.x - 25 && self.x <= enemy.x + 25) {
-                    if(self.y >= enemy.y - 25 && self.y <= enemy.y + 25) {
-                        self.reset();
+                if(player.x >= enemy.x - 25 && player.x <= enemy.x + 25) {
+                    if(player.y >= enemy.y - 25 && player.y <= enemy.y + 25) {
+                        player.reset();
                     }
                 }
             });
