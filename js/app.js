@@ -65,13 +65,7 @@ Player.prototype.update = function(dt) {
         document.getElementById('placar').innerHTML = parseInt(document.getElementById('placar').innerHTML) + 1;
         this.reset();
     }
-    allEnemies.forEach(function(enemy) {
-        if(self.x >= enemy.x - 25 && self.x <= enemy.x + 25) {
-            if(self.y >= enemy.y - 25 && self.y <= enemy.y + 25) {
-                self.reset();
-            }
-        }
-    });
+
 };
 
 //inicia placar
